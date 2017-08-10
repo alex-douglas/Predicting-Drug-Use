@@ -1,0 +1,82 @@
+html {
+  font-family: sans-serif;
+}
+
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #333;
+  background-color: #fff;
+}
+
+.app_form br {
+  display: block; /* makes it have a width */
+  content: ""; /* clears default height */
+  margin-top: 8px; /* change this to desired height*/
+}
+
+.invis_butt {
+	float: right; 
+	background-color: transparent; 
+	color: transparent; 
+	outline: none; 
+	text-decoration: none; 
+	border: none;
+}
+
+.my_button {
+	height: 75px !important;
+	width: 120px !important;
+  margin: 10px !important;
+  font: 24px !important;
+  font-size: 24px !important;
+}
+
+.chart div {
+  font: 12px sans-serif !important;
+  background-color: steelblue !important;
+  text-align: right !important;
+  padding: 3px !important;
+  margin: 10px !important;
+  color: white !important;
+}
+
+.chart g {
+  margin: 10px !important;
+}
+
+.bar {
+  fill: steelblue;
+}
+
+.chart rect {
+  fill: steelblue;
+}
+
+.chart text {
+  fill: white;
+  font: 12px sans-serif;
+  text-anchor: middle;
+}
+
+.axis text {
+  font: 16px sans-serif;
+  color: #333333;
+  fill: #333333;
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.x.axis path {
+  display: none;
+}
+
+.y text {
+  padding-right: 20px;
+}

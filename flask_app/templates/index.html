@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>PROJECT 3</title>
+		<script src="https://d3js.org/d3.v4.min.js"></script>
+		<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+		<script type="text/javascript" src="../static/js/general_13.js"></script>
+		<link rel="stylesheet" type="text/css" href="../static/stylesheets/main_styles_9.css">
+</head>
+
+<body>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<h1 style="text-align: center; font-size: 6em; margin-bottom: 0px; font-weight: bold;">Predicting Drug Use</h1>
+	<a href="#page_2"><button class="invis_butt" type="submit" autofocus onclick="javascript:getFocus('page_2');">i</button></a>
+	<h2 style="text-align: center; font-size: 3em; margin-top: 0px">Alex Douglas</h2>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+
+	<p><a name="page_2" style="color: white;">2</a><a href="#page_3"><button class="invis_butt" id="page_2" type="submit"onclick="javascript:getFocus('page_3');"">i</button></a></p>
+	<br>
+	<br>
+	<div style="margin-left: 80px; margin-right: 80px">
+		<h1 style="font-size: 2.5em">New York Times: <i>Economy Needs Workers, but Drug Tests Take a Toll (July 24, 2017)</i></h1>
+		<p style="font-size: 2em">"Last year, when a member of an employee’s family gave birth to a baby found to be addicted to opiates, the company paid $300,000 for three months of treatment in a neonatal intensive-care unit."</p>
+		<br>
+		<h1 style="font-size: 2.5em">Washington Post: <i>Rise of the Machines (August 5, 2017)</i></h1>
+		<p style="font-size: 2em">"The line was intended for 12 workers, but two were no-shows. One had just been jailed for drug possession and violating probation."</p>
+	</div>	
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+
+	<p><a name="page_3" style="color: white;">3</a><a href="#page_4"><button class="invis_butt" id="page_3" type="submit"onclick="javascript:getFocus('page_4');"">i</button></a></p>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<h1 style="text-align: center; font-size: 6em; margin-bottom: 0px; font-weight: bold;">Question:</h1>
+	<h2 style="text-align: center; font-size: 3em; margin-top: 0px">Can we predict drug use using basic, legally accessible information about a job candidate?</h2>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+
+	<p><a name="page_4" style="color: white;">4</a><a href="#page_5"><button class="invis_butt" id="page_4" type="submit"">i</button></a></p>
+	<div style="margin-left: 80px; margin-right: 80px">
+		<h1 style="font-size: 3.5em">National Survey on Drug Use and Health 2015</i></h1>
+		<div style="margin-left: 40px">
+			<p style="font-size: 2.5em; margin-bottom: 0; font-weight: bold;">
+		Demographic Data:
+				<ul style="font-size: 2em; margin-top: 0">
+					<li>Education</li>
+					<li>Employment History</li>
+					<li>Family Income</li>
+				</ul>
+			</p>
+			<p style="font-size: 2.5em; margin-bottom: 0; font-weight: bold;">
+		Health/Personality Data:
+				<ul style="font-size: 2em; margin-top: 0">
+					<li>Hospital Visits</li>
+					<li>Mental Health</li>
+					<li>Risk Aversion</li>
+				</ul>
+			</p>
+			<p style="font-size: 2.5em; margin-bottom: 0; font-weight: bold;">
+			Drug User:
+				<ul style="font-size: 2em; margin-top: 0">
+					<li>Used any major illicit drug in previous 12 months</li>
+				</ul>
+			</p>
+		</div>
+	</div>	
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+
+	<p><a name="page_5" style="color: white;">5</a></p>
+	<br>
+	<br>
+	<div style="margin-left: 480px" class="buttons">
+		<button class="my_button" onclick="javascript:change_pic('sex');">
+			Sex
+		</button>
+		<button class="my_button" onclick="javascript:change_pic('drug_type');">
+			Drugs
+		</button>
+	</div>
+	<br>
+	<br>
+	<br>
+	<br>
+	<img style="margin-left: 260px" width="650" height="433.33" id="graph_img" src="../static/img/white_2.png" alt="white">
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<a href="#page_6"><button type="submit" onclick="javascript:getFocus('page_6');">Continue</button></a>
+
+	<p><a name="page_6" style="color: white;">6</a><a href="#page_7"><button class="invis_butt" id="page_6" type="submit"">i</button></a></p>
+	<div style="margin-left: 80px; margin-right: 80px">
+		<h1 style="font-size: 3.5em">Classification Model: Cost Considerations</i></h1>
+		<div style="margin-left: 40px">
+			<p style="font-size: 2.5em; margin-bottom: 0; font-weight: bold;">
+				1. Mis-labeled as a drug-user (FP):
+				<ul style="font-size: 2em; margin-top: 0">
+					<li>Extended search costs</li>
+					<li>Lost productivity due to missing worker</li>
+					<li>Decreased reputation due to errant rejections</li>
+				</ul>
+			</p>
+			<p style="font-size: 2.5em; margin-bottom: 0; font-weight: bold;">
+				2. Accept drug-user into applicant pool (FN):
+				<ul style="font-size: 2em; margin-top: 0">
+					<li>Waste employee time on interviews</li>
+					<li>Must restart search after failed drug test</li>
+					<li>If pass drug test, higher risk of subsequent problems</li>
+				</ul>
+			</p>
+			<p style="font-size: 2.5em; margin-bottom: 0; font-weight: bold;">
+				Assumed here:
+				<ul style="font-size: 2em; margin-top: 0">
+					<li>FN 1.25x as expensive as FP</li>
+				</ul>
+			</p>
+		</div>
+	</div>	
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+
+	<p><a name="page_7" style="color: white;">7</a><a href="#page_8"><button class="invis_butt" id="page_7" type="submit"">i</button></a></p>
+	<div style="margin-left: 80px; margin-right: 80px">
+		<h1 style="font-size: 3.5em">Model Results</i></h1>
+		<div style="margin-left: 40px">
+			<p style="font-size: 2.5em; margin-bottom: 0; font-weight: bold;">
+				Random Forest Classifier
+				<ul style="font-size: 2em; margin-top: 0">
+					<li>4.2% improvement over baseline</li>
+					<li>82% accuracy</li>
+					<li>0.46 F1 - 65% AUC</li>
+				</ul>
+			</p>
+			<p style="font-size: 2.5em; margin-bottom: 0; font-weight: bold;">
+				Feature Importance:
+				<ul style="font-size: 2em; margin-top: 0">
+					<li>Weight</li>
+					<li># days binged alcohol</li>
+					<li>Age</li>
+					<li>Cigarette use</li>
+					<li>Alcohol use</li>
+					<li># days unable to work</li>
+					<li>Tendency towards risky behavior</li>
+				</ul>
+			</p>
+		</div>
+	</div>	
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+
+	<p><a name="page_8" style="color: white;">8</a><a href="#page_9"><button class="invis_butt" id="page_8" type="submit"onclick="javascript:getFocus('page_9');"">i</button></a></p>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<h2 style="text-align: center; font-size: 3em; margin-top: 0px">Sample Pre-Employment Application</h2>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+
+	<p><a name="page_9" style="color: white;">9</a></p>
+	<br>
+	<h1 style="margin-left: 90px; font-size: 3em">Thank you for your interest in GENERIC CO. INC. LLC.</h1>
+	<h2 style="margin-left: 90px; font-size: 2em">Please fill out the following pre-employment application</h2>
+
+	<form class="app_form" style="margin-left: 110px; font-size: 1.5em" action="/predict_drug_use" method="post">
+		Name: &nbsp;&nbsp;<input type="text" id="nom" name="applicant_name"><br><br>
+		Age: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="applicant_age"><br><br>
+		Height: &nbsp;<input type="text" name="applicant_height"><br><br>
+		Weight: &nbsp;<input type="text" name="applicant_weight"><br><br>
+		Gender: <input type="radio" name="gender" value="male"> Male
+				<input type="radio" name="gender" value="female"> Female <br><br>
+		Have you ever served in the U.S. Military? <input type="radio" name="military" value="yes_military"> Yes
+				<input type="radio" name="military" value="no_military"> No <br><br>
+		Marital Status: <input type="radio" name="marital_status" value="married" id="marriedCheck" onclick="javascript:checkIfDivorced();"> Married
+						<input type="radio" name="marital_status" value="single" id="singleCheck" onclick="javascript:checkIfDivorced();"> Single
+						<input type="radio" name="marital_status" value="divorced" id="divorcedCheck" onclick="javascript:checkIfDivorced();"> Divorced
+		<br><br>
+		<div id="ifDivorced" style="display: none;">
+			How many times have you been previously married?
+			<input type="text" name="times_married">
+			<br><br>
+		</div>
+		Do you live with your parents? <input type="radio" name="live_parents" value="yes_live" id="yes_live_check" onclick="javascript:checkIfLive();"> Yes
+						<input type="radio" name="live_parents" value="no_live" id="no_live_check" onclick="javascript:checkIfLive();"> No
+		<br><br>
+		<div id="ifLive" style="display: none;">
+			What is your total annual household income?
+			<input type="text" name="household_income">
+			<br><br>
+		</div>
+		Rate your overall health on a scale of 1 - 5: <br><br>
+		<input type="radio" name="health" value="1"> 1 - Excellent
+		<input type="radio" name="health" value="2"> 2
+		<input type="radio" name="health" value="3"> 3
+		<input type="radio" name="health" value="4"> 4
+		<input type="radio" name="health" value="5"> 5 - Very Poor
+
+		<p><a name="page_9" style="color: white;">0</a></p>
+		
+	</form>
+	<button style="margin-left: 90px" type="submit" onclick="javascript:change_name('page_10');">Submit Application</button>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<h2 id="thanks" style="text-align: center; font-size: 3em; margin-bottom: 0px">Thank you for your Application</h2>
+	<h2 style="text-align: center; font-size: 2.5em; margin-top: 0px">A member of our HR department will get back to you soon.</h2>
+	<p><a name="page_10" style="color: white;">10</a><a href="#page_11"><button class="invis_butt" id="page_10" type="submit"onclick="javascript:getFocus('page_11');"">i</button></a></p>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+
+	<p><a name="page_11" style="color: white;">11</a><a href="#page_12"><button class="invis_butt" id="page_11" type="submit"onclick="javascript:getFocus('page_12');"">i</button></a></p>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<h2 id="name_result" style="text-align: center; font-size: 3em; margin-bottom: 0px">Applicant: </h2>
+	<h2 style="text-align: center; font-size: 2.5em; margin-top: 0px">Drug-User Risk: High</h2>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+
+	<p><a name="page_12" style="color: white;">12</a></p>
+	<div style="margin-left: 80px; margin-right: 80px">
+		<h1 style="font-size: 3.5em">Thank you</i></h1>
+		<div style="margin-left: 40px">
+			<p style="font-size: 2.5em; margin-bottom: 0; font-weight: bold;">
+				Contact
+				<div style="font-size: 2em; margin-top: 0; margin-left: 30px">
+					<img style="vertical-align: middle;" width="50px" height="50px" src="../static/img/gmail.svg"> alex.douglas4545@gmail.com<br>
+					<img style="vertical-align: middle;" width="50px" height="50px" src="../static/img/twitter.jpg"> @ar_douglas<br>
+					<img style="vertical-align: middle;" width="50px" height="50px" src="../static/img/github.png"> https://github.com/alex-douglas<br>
+				</div>
+			</p>
+		</div>
+	</div>	
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>	
+
+	<!--
+	<script type="text/javascript" src="../static/js/d3_script_20.js"></script>
+	-->
+</body>
+</html>
+
+
+
+
+
+
+
